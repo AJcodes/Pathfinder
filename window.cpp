@@ -4,9 +4,7 @@
 #include <QtWidgets>
 #include <QApplication>
 
-Window::Window()
-    : QMainWindow(0)
-{
+Window::Window() : QMainWindow(0) {
 
     game = new Game(this);
     setCentralWidget(game);
@@ -27,21 +25,18 @@ Window::Window()
 
 }
 
-void Window::startNewGame()
-{
+void Window::startNewGame() {
     game->resetGame();
 }
 
-void Window::showShortestPath()
-{
+void Window::showShortestPath() {
     game->showSolution();
     QMessageBox msgBox;
     msgBox.setText("You cheated! The only way to continue playing is to start a new game.");
     msgBox.exec();
 }
 
-void Window::showAbout()
-{
+void Window::showAbout() {
     QMessageBox msgBox;
     msgBox.setText("Pathfinders is a simple game where you must take the shortest path to get to the goal point (the orange box). Use the arrow keys to navigate.\nBe careful though, you must take a minimum number of steps to get there or you fail.\n\nCoded by Adel Johar");
     msgBox.exec();
