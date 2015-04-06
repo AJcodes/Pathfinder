@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Pathfinder
 TEMPLATE = app
-
+CONFIG += static
 
 SOURCES += main.cpp \
     game.cpp \
@@ -30,3 +30,6 @@ DISTFILES += \
     maze3.png \
     maze4.png \
     maze5.png
+
+RESOURCES += \
+    images.qrc
